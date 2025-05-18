@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu - MedTask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="menu-wrapper">
+    <div class="menu-card">
+        <h2>Menu</h2>
+        <p>Escolha uma opção para acessar o MedTask</p>
+
+        <div class="menu-actions">
+            <a href="/tarefas" class="menu-button">📋 Ver Tarefas</a>
+            <a href="/logout" class="menu-button logout">🚪 Sair</a>
+        </div>
+    </div>
+</body>
+</html>
