@@ -8,6 +8,11 @@
 <body class="menu-wrapper">
     <div class="menu-card">
         <h2>Menu</h2>
+
+        {% if g.usuario %}
+            <p>👤 Logado como: <strong>{{ g.usuario['nome'] }}</strong></p>
+        {% endif %}
+
         <p>Escolha uma opção para acessar o MedTask</p>
 
         <div class="menu-actions">
