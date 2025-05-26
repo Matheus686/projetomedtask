@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar Tarefa - MedTask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="form-card">
+        <h2>Cadastrar Nova Tarefa</h2>
+        <form method="POST" action="/cadastrar">
+            <div class="input-group">
+                <input type="text" name="titulo" placeholder="Título" required>
+            </div>
+            <div class="input-group">
+                <label>Prioridade:</label>
+                <select name="prioridade" required>
+                    <option value="1">1 - Alta</option>
+                    <option value="2">2 - Média</option>
+                    <option value="3">3 - Baixa</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <input type="text" name="horario" placeholder="Horário (ex: 930 ou 09:30)" required>
+            </div>
+            <button type="submit" class="btn">Adicionar</button>
+        </form>
+        <a href="/menu" class="btn btn-secondary">⬅️ Voltar ao menu</a>
+    </div>
+</body>
+</html>
