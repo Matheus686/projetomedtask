@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Listar Tarefas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div id="flash-message" class="popup">
+          {{ messages[0] }}
+        </div>
+        <script>
+          setTimeout(() => {
+            const popup = document.getElementById('flash-message');
+            if (popup) popup.style.display = 'none';
+          }, 3000);
+        </script>
+      {% endif %}
+    {% endwith %}
+
+    <div class="task-content">
+        <h2>Suas Tarefas</h2>
+        <div class="task-list">
+            {% for tarefa in tarefas %}
+                <div class="task-item" data-prioridade="{{ tarefa['prioridade'] }}">
+                    <h3>{{ tarefa['titulo'] }}</h3>
+                    <p><strong>Prioridade:</strong> {{ tarefa['prioridade'] }}</p>
+                    <p><strong>Horário:</strong> {{ tarefa['horario'] }}</p>
+                    <p><strong>Data de Criação:</strong> {{ tarefa['data_criacao'] }}</p>
+                    <a href="/concluir/{{ tarefa['id'] }}" class="btn btn-success">✔️ Concluir</a>
+                    <a href="/editar/{{ tarefa['id'] }}" class="btn">✏️ Editar</a>
+                    <a href="/deletar/{{ tarefa['id'] }}" class="btn btn-delete">🗑️ Excluir</a>
+                </div>
+            {% endfor %}
+        </div>
+        <a href="/menu" class="btn btn-secondary">⬅️ Voltar ao menu</a>
+    </div>
+    <footer style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #777;">
+        © 2025 Matheus Silva, Marcos Oliveira, Miguel Andrade. Todos os direitos reservados.
+    </footer>
+</body>
+</html>

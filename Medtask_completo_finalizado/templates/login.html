@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login - MedTask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="login-wrapper">
+        <div class="login-card">
+            <h2>Login</h2>
+            <p>Entre com suas credenciais para acessar o MedTask</p>
+
+            {% if request.args.get('erro') == '1' %}
+            <div class="erro-login">
+                Usuário ou senha inválidos.
+            </div>
+            {% endif %}
+
+            <form method="POST" action="/login">
+                <div class="input-group">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Digite seu usuário" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+        </div>
+    </div>
+     <footer style="text-align: center; margin-top: 20px; font-size: 0.9em; color: #777;">
+        © 2025 Matheus Silva, Marcos Oliveira, Miguel Andrade. Todos os direitos reservados.
+    </footer>
+</body>
+</html>
