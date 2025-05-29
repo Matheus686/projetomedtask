@@ -106,7 +106,7 @@ python app.py
 |-----------------------------------|--------------------------------------------------|
 | Matheus Silva Soares             | [@Matheus](https://github.com/Matheus686) |
 | Marcos Antônio Da Silva Souza    | [@Marcos]()                                     |
-| Miguel da Silva Perreira         | [@Miguel]()                                     |
+| Miguel da Silva Perreira         | [@Miguel](https://github.com/MiguelPereira7)                                     |
 
 ---
 
