@@ -85,16 +85,16 @@ python app.py
 ## 📸 Demonstrações
 
 - Tela de Login  
-  ![Login](static/Login.PNG)
+  ![Login](imagem/Login.PNG)
 
 - Menu Principal com opções de navegação (Cadastrar nova tarefa, ver tarefas e Logout)  
-  ![Menu](static/Menu.PNG)
+  ![Menu](imagem/Menu.PNG)
 
 - Tela de Cadastro de Tarefas  
-  ![Cadastrar](static/Cadastrar.PNG)
+  ![Cadastrar](imagem/Cadastrar.PNG)
 
 - Listagem de tarefas com edição e remoção  
-  ![Listar](static/Lista%20de%20tarefas.PNG)
+  ![Listar](imagem/Lista%20de%20tarefas.PNG)
 
 - Estilo visual leve com CSS e imagem ilustrativa
 
