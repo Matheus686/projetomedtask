@@ -1,5 +1,6 @@
 
 # 🚀 Nome do Projeto
+![Logo](static/logo.jpeg)
 
 **Projeto:** MEDTASK – Gerenciador de Tarefas com C, Python e SQLite
 
